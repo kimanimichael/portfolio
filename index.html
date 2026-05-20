@@ -3,86 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Kimani | Engineering Portfolio</title>
+    <title>Michael Kimani | Mechatronic & Embedded Systems Engineer</title>
+    <meta name="description" content="Michael Kimani, a mechatronic engineer building embedded systems and firmware, backend services in Go and Rust, and the hardware that runs them.">
+    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:title" content="Michael Kimani | Engineering Portfolio">
+    <meta property="og:description" content="Embedded systems, backend services, and hardware design.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Header & Hero -->
-<header class="hero">
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#top" class="nav-brand"><span class="dot"></span>Michael Kimani</a>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" id="top">
     <div class="hero-content">
-        <img src="images/mk-profile.jpeg" alt="Michael Kimani" class="profile-pic">
+        <img src="images/mk-profile.jpeg" alt="Portrait of Michael Kimani" class="profile-pic">
         <div>
+            <div class="eyebrow">Mechatronic Engineer</div>
             <h1>Michael Kimani</h1>
-            <p class="tagline">Mechatronic Engineer • Embedded Systems • Backend Services Developer</p>
-            <p>
-                I design and build embedded systems from hardware to firmware, and develop backend services.
-                Passionate about learning and solving problems to improve everyday life for all of humanity
+            <p class="tagline">Embedded Systems · Backend Services · Hardware</p>
+            <p class="bio">
+                I design and build embedded systems end-to-end, from firmware
+                to the backend services that bring them online, down to the
+                PCB hardware that runs it all. I care about pragmatic,
+                well-tested systems that solve real problems.
             </p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="mailto:muchunumike@gmail.com">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Get in touch
+                </a>
+                <a class="btn" href="https://github.com/kimanimichael" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                    GitHub
+                </a>
+                <a class="btn" href="https://linkedin.com/in/michael-kimani" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                    LinkedIn
+                </a>
+            </div>
         </div>
     </div>
 </header>
 
-<!-- Projects -->
 <section id="projects" class="section">
-    <h2>Featured Projects</h2>
-    <div id="project-list" class="project-grid"></div>
+    <div class="section-head">
+        <h2>Featured Projects</h2>
+        <span class="section-num">01 / Work</span>
+    </div>
+    <div id="project-list" class="project-grid">
+        <div class="projects-loading">Loading projects from GitHub…</div>
+    </div>
 </section>
 
 <section id="skills" class="section">
-    <h2>Skills</h2>
+    <div class="section-head">
+        <h2>Skills &amp; Tools</h2>
+        <span class="section-num">02 / Stack</span>
+    </div>
     <div class="skills-grid">
         <div class="skill-card">
             <h3>Embedded Systems</h3>
-            <ul>
-                <li>mbed-os</li>
-                <li>ESP-IDF</li>
-                <li>C++</li>
-                <li>Rust</li>
-                <li>ARM Development</li>
-            </ul>
-        </div>
-        <div class="skill-card">
-            <h3>Hardware Design</h3>
-            <ul>
-                <li>KiCad</li>
-                <li>EasyEDA</li>
-                <li>PCB Layout</li>
-                <li>Prototyping</li>
-            </ul>
+            <div class="skill-tags">
+                <span class="skill-tag">mbed-os</span>
+                <span class="skill-tag">ESP-IDF</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Rust</span>
+                <span class="skill-tag">ARM</span>
+                <span class="skill-tag">RTOS</span>
+            </div>
         </div>
         <div class="skill-card">
             <h3>Backend Development</h3>
-            <ul>
-                <li>Go (Golang)</li>
-                <li>Rust</li>
-                <li>PostgreSQL</li>
-                <li>REST APIs</li>
-                <li>Docker</li>
-            </ul>
+            <div class="skill-tags">
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">Rust</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Docker</span>
+            </div>
         </div>
         <div class="skill-card">
-            <h3>Tools & Workflow</h3>
-            <ul>
-                <li>Git</li>
-                <li>Render Deployment</li>
-                <li>Linux</li>
-                <li>Agile Development</li>
-            </ul>
+            <h3>Hardware Design</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">KiCad</span>
+                <span class="skill-tag">EasyEDA</span>
+                <span class="skill-tag">PCB Layout</span>
+                <span class="skill-tag">Schematic Capture</span>
+                <span class="skill-tag">Prototyping</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>Tools &amp; Workflow</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Render</span>
+                <span class="skill-tag">Agile</span>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:muchunumike@gmail.com">muchunumike@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/kimanimichael" target="_blank">github.com/kimanimichael</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/michael-kimani" target="_blank">linkedin.com/in/michael-kimani</a></p>
+<section id="contact" class="section">
+    <div class="section-head">
+        <h2>Get in Touch</h2>
+        <span class="section-num">03 / Contact</span>
+    </div>
+    <p style="max-width: 56ch;">
+        Open to interesting engineering problems in embedded, backend, or hardware.
+        The fastest way to reach me is email.
+    </p>
+    <div class="contact-grid">
+        <div class="contact-item">
+            <div class="label">Email</div>
+            <a href="mailto:muchunumike@gmail.com">muchunumike@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <div class="label">GitHub</div>
+            <a href="https://github.com/kimanimichael" target="_blank" rel="noopener">@kimanimichael</a>
+        </div>
+        <div class="contact-item">
+            <div class="label">LinkedIn</div>
+            <a href="https://linkedin.com/in/michael-kimani" target="_blank" rel="noopener">michael-kimani</a>
+        </div>
+    </div>
 </section>
 
-<!-- Footer -->
 <footer>
-    <p>© 2026 Michael Kimani</p>
+    <div class="footer-inner">
+        <span>© <span id="year"></span> Michael Kimani</span>
+    </div>
 </footer>
 
 <script src="script.js"></script>
