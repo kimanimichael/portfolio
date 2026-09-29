@@ -16,13 +16,6 @@ const LANG_COLORS = {
     "Jupyter Notebook": "#DA5B0B",
 };
 
-function escapeHtml(str) {
-    if (!str) return "";
-    return str.replace(/[&<>"']/g, c => ({
-        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-    }[c]));
-}
-
 function renderCard(repo) {
     const langColor = LANG_COLORS[repo.language] || "var(--ink-mute)";
     const stars = repo.stargazers_count;
@@ -71,5 +64,32 @@ async function loadProjects() {
     }
 }
 
+function renderPostRow(post) {
+    return `
+        <a class="post-row" href="post.html?slug=${post.slug}">
+            <time class="post-date" datetime="${escapeHtml(post.date)}">${escapeHtml(formatDate(post.date))}</time>
+            <div class="post-main">
+                <h3>${escapeHtml(post.title)}</h3>
+                ${post.summary ? `<p class="desc">${escapeHtml(post.summary)}</p>` : ""}
+            </div>
+            <span class="post-read">${post.minutes} min read</span>
+        </a>
+    `;
+}
+
+async function loadPosts() {
+    const container = document.getElementById("post-list");
+    try {
+        const posts = await fetchAllPosts();
+        container.innerHTML = posts.length
+            ? posts.map(renderPostRow).join("")
+            : `<div class="projects-empty">No posts yet.</div>`;
+    } catch (err) {
+        console.error("Error loading posts:", err);
+        container.innerHTML = `<div class="projects-empty">Couldn't load posts right now.</div>`;
+    }
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();
+loadPosts();
 loadProjects();
